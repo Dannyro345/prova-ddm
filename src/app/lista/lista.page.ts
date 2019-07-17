@@ -45,7 +45,7 @@ export class ListaPage {
 
   remove(passagem) {
     this.loadingController.create({
-      message: "Carregando"
+      message: "Removido com sucesso !"
     }).then((loader) => {
       loader.present()
       this.passagemservice.delete(passagem.id).subscribe(

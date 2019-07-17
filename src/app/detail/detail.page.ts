@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-detail',
@@ -7,9 +9,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DetailPage implements OnInit {
 
-  constructor() { }
+  id;
+  passagem;
 
-  ngOnInit() {
-  }
+  constructor(private route: ActivatedRoute, private http: HttpClient) {
+    this.id = this.route.snapshot.paramMap.get('id')
+    this.passagem = this.http.get("https://5d262f92eeb36400145c59c4.mockapi.io/passagem/" + this.id).subscribe(
+      (data) => {
+        this.passagem = data
+      }
+    )
+    
 
 }

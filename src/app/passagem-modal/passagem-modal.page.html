@@ -14,31 +14,48 @@
     <ion-card-content>
 
       <ion-item>
-        <ion-input placeholder="id" [(ngModel)]="passagem.id"></ion-input>
+        <ion-label> Nome: </ion-label>
+        <ion-input [(ngModel)]="passagem.passagem"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input placeholder="createdAt" [(ngModel)]="passagem.createdAt"></ion-input>
+        <ion-label> ID: </ion-label>
+        <ion-input [(ngModel)]="passagem.id"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input placeholder="Origem" [(ngModel)]="passagem.origem"></ion-input>
+        <ion-label> CreatedAt: </ion-label>
+        <ion-input [(ngModel)]="passagem.createdAt"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input placeholder="Destino" [(ngModel)]="passagem.destino"></ion-input>
+        <ion-label> Origem: </ion-label>
+        <ion-input [(ngModel)]="passagem.origem"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input placeholder="Poltrona" [(ngModel)]="passagem.poltrona"></ion-input>
+        <ion-label> Destino: </ion-label>
+        <ion-input [(ngModel)]="passagem.destino"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input placeholder="Valor" [(ngModel)]="passagem.valor"></ion-input>
+        <ion-label> Destino: </ion-label>
+        <ion-input [(ngModel)]="passagem.destino"></ion-input>
       </ion-item>
 
       <ion-item>
-        <ion-input placeholder="Data" [(ngModel)]="passagem.data"></ion-input>
+        <ion-label> Poltrona: </ion-label>
+        <ion-input [(ngModel)]="passagem.poltrona"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label> Valor: </ion-label>
+        <ion-input [(ngModel)]="passagem.valor"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label> Data: </ion-label>
+        <ion-input [(ngModel)]="passagem.data"></ion-input>
       </ion-item>
 
       <ion-button expand="full" (click)="add()">Ok</ion-button>
@@ -49,3 +66,10 @@
 </ion-content>
 
 
+"id": "",
+"createdAt": "",
+"origem": "",
+"destino": "",
+"poltrona": "",
+"valor": "",
+"data": ""
