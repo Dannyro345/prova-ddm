@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
 
 @Component({
   selector: 'app-passagem-modal',
@@ -7,9 +8,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PassagemModalPage implements OnInit {
 
-  constructor() { }
+  // Passando as informações
+  passagem = {
+
+    "id": "",
+    "createdAt": "",
+    "origem": "",
+    "destino": "",
+    "poltrona": "",
+    "valor": "",
+    "data": ""
+    
+  }
+
+  constructor(public modal: ModalController) { }
 
   ngOnInit() {
+  }
+
+  // Chamando o metodo add
+  add(){
+    this.modal.dismiss(this.passagem)
   }
 
 }

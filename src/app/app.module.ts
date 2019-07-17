@@ -11,8 +11,15 @@ import { AppRoutingModule } from './app-routing.module';
 
 // Modal
 import {PassagemModalPageModule} from './passagem-modal/passagem-modal.module';
+
+// List
+import {ListaPageModule} from './lista/lista.module';
 // Http
 import {HttpClientModule} from '@angular/common/http';
+
+// Storage
+import {IonicStorageModule} from '@ionic/storage';
+
 
 
 @NgModule({
@@ -22,7 +29,9 @@ import {HttpClientModule} from '@angular/common/http';
      IonicModule.forRoot(), 
      AppRoutingModule,
      PassagemModalPageModule,
-     HttpClientModule
+     ListaPageModule,
+     HttpClientModule,
+     IonicStorageModule.forRoot(),
     ],
   providers: [
     StatusBar,
