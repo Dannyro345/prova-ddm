@@ -7,16 +7,16 @@ import { HttpClient } from '@angular/common/http';
 export class PassagemService {
 
   constructor(private http:HttpClient) { }
-
+  URL_BASE = "https://5d262f92eeb36400145c59c4.mockapi.io/passagem/";
   list(){
-    return this.http.get("https://5d262f92eeb36400145c59c4.mockapi.io/passagem/")
+    return this.http.get(this.URL_BASE)
   }
 
   post(passagem){
-    return this.http.post("https://5d262f92eeb36400145c59c4.mockapi.io/passagem/", passagem)
+    return this.http.post(this.URL_BASE, passagem)
   }
 
   delete(passagem){
-    return this.http.delete("https://5d262f92eeb36400145c59c4.mockapi.io/passagem/" + passagem)
+    return this.http.delete(this.URL_BASE + passagem)
   }
 }

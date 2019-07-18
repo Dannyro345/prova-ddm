@@ -22,6 +22,7 @@ import {IonicStorageModule} from '@ionic/storage';
 
 // Camera
 import {Camera} from '@ionic-native/camera/ngx';
+import { PassagemPageModule } from './passagem/passagem.module';
 
 
 
@@ -32,9 +33,11 @@ import {Camera} from '@ionic-native/camera/ngx';
      IonicModule.forRoot(), 
      AppRoutingModule,
      PassagemModalPageModule,
+     PassagemPageModule,
      ListaPageModule,
      HttpClientModule,
      IonicStorageModule.forRoot(),
+ 
     ],
   providers: [
     StatusBar,

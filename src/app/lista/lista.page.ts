@@ -15,12 +15,12 @@ export class ListaPage {
 
   passagens;
 
-  constructor(private http: HttpClient, public loadingController: LoadingController, public modalController: ModalController,private passagemservice:PassagemService) {
+  constructor(private http: HttpClient, public loadingController: LoadingController, public modalController: ModalController,private passagemService:PassagemService) {
     this.loadingController.create({
       message: "Carregando"
     }).then((loader) => {
       loader.present()
-      this.passagemservice.list().subscribe(
+      this.passagemService.list().subscribe(
         (data) => {
           this.passagens = data
           loader.dismiss()
@@ -34,7 +34,7 @@ export class ListaPage {
       message: "Carregando"
     }).then((loader) => {
       loader.present()
-      this.passagemservice.post(passagem).subscribe(
+      this.passagemService.post(passagem).subscribe(
         (data) => {
           this.passagens.push(data)
           loader.dismiss()
@@ -48,7 +48,7 @@ export class ListaPage {
       message: "Removido com sucesso !"
     }).then((loader) => {
       loader.present()
-      this.passagemservice.delete(passagem.id).subscribe(
+      this.passagemService.delete(passagem.id).subscribe(
         (data) => {
           var i = this.passagens.indexOf(passagem);
           this.passagens.splice(i, 1);

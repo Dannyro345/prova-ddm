@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { Camera, CameraOptions } from '@ionic-native/camera/ngx';
+import { Storage } from '@ionic/storage';
 
 @Component({
   selector: 'app-passagem',
@@ -13,9 +14,13 @@ export class PassagemPage implements OnInit {
     "nome": "",
     "url": ""
   }
-  
-  constructor(public modalController: ModalController, private camera: Camera) { }
+  passagem_key = "passagem";
 
+  constructor(public modalController: ModalController, private camera: Camera, public storage: Storage) { }
+  
+  atualizar() {
+    this.modalController.dismiss(this.passagem)
+  }
   ngOnInit() {
   }
 
