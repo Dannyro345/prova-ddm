@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Olá, {{usuario.nome}}!
+      Olá, {{passagem.nome}}!
     </ion-title>
     
     <ion-buttons slot="end">
@@ -15,7 +15,7 @@
 
 <ion-content>
   <ion-card>
-    <img class="rounded mb-0" src="{{usuario.url}}" alt="">
+    <img class="rounded mb-0" src="{{passagem.url}}" alt="">
   </ion-card>
-  <ion-button expand="full" (click)="abrir_modal()"> Editar Perfil</ion-button>
+  <ion-button expand="full" (click)="modal()"> Editar Perfil</ion-button>
 </ion-content>

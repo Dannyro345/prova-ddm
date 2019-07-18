@@ -6,7 +6,7 @@
 
 <ion-content>
   <ion-list>
-    <ion-item-sliding *ngFor="let Passagem of Passagens">
+    <ion-item-sliding *ngFor="let Passagens of Passagens">
 
       <ion-item href="/detail/{{Passagem.id}}/">{{Passagem.Passagem}}</ion-item>
 
@@ -18,9 +18,11 @@
 
     </ion-item-sliding>
   </ion-list>
+
   <ion-fab (click)="modal()" class="button-native" vertical="bottom" horizontal="end">
     <ion-fab-button>
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
   </ion-fab>
+
 </ion-content>

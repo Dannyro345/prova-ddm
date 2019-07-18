@@ -10,9 +10,9 @@ import { Storage } from '@ionic/storage';
 })
 export class HomePage {
 
-  usuario = {
-    "nome": "Usuario",
-    "url": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/CandymyloveYasu.png/220px-CandymyloveYasu.png",
+  passagem = {
+    "nome": "Passagem",
+    "url": "https://viagenscinematograficas.com.br/wp-content/uploads/2015/10/Paris-Slider-min-2-740x431@2x.jpg",
   }
 
   constructor(public modalController: ModalController, private storage: Storage) {
@@ -26,7 +26,7 @@ export class HomePage {
     await modal.present();
 
     modal.onDidDismiss().then((dados) => {
-      this.usuario = dados.data
+      this.passagem = dados.data
     })
   }
 

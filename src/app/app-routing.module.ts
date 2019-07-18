@@ -7,6 +7,7 @@ const routes: Routes = [
   { path: 'lista', loadChildren: './lista/lista.module#ListaPageModule' },
   { path: 'passagem-modal', loadChildren: './passagem-modal/passagem-modal.module#PassagemModalPageModule' },
   { path: 'detail', loadChildren: './detail/detail.module#DetailPageModule' },
+  { path: 'passagem', loadChildren: './passagem/passagem.module#PassagemPageModule' },
 ];
 
 @NgModule({
