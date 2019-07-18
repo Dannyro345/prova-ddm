@@ -53,6 +53,13 @@
         <ion-input [(ngModel)]="passagem.data"></ion-input>
       </ion-item>
 
+      <ion-item>
+        <img src="{{passagem.url}}" alt="">
+        <ion-button (click)="take_picture()">
+          <ion-icon name="camera"></ion-icon>
+        </ion-button>
+      </ion-item>
+
       <ion-button expand="full" (click)="add()">Ok</ion-button>
 
     </ion-card-content>
