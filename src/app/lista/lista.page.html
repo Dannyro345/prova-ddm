@@ -8,7 +8,7 @@
   <ion-list>
     <ion-item-sliding *ngFor="let passagem of passagens">
 
-      <ion-item href="/detail/{{passagem.id}}/">{{passagem.passagem}}</ion-item>
+      <ion-item href="/detail/{{passagem.id}}/">{{passagem.destino}}</ion-item>
       <ion-item-options>
         <ion-item-option (click)="remove(passagem)">
           <ion-icon md="md-trash" slot="end"></ion-icon>
